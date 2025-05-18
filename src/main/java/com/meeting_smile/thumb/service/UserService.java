@@ -12,6 +12,6 @@ import jakarta.servlet.http.HttpServletRequest;
  * @author meeting_smile
  * @since 2025-05-13
  */
-public interface IUserService extends IService<User> {
+public interface UserService extends IService<User> {
     public User getLoginUser(HttpServletRequest request);
 }

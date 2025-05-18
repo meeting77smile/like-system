@@ -10,6 +10,7 @@ public interface ThumbConstant {
      */
     String USER_THUMB_KEY_PREFIX = "thumb:";
 
+    //约定为0时代表当前未点赞
     Long UN_THUMB_CONSTANT = 0L;
 
     /**

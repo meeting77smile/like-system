@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
  * @author meeting_smile
  * @since 2025-05-13
  */
-public interface IThumbService extends IService<Thumb> {
+public interface ThumbService extends IService<Thumb> {
 
     /**
      * 功能描述：点赞操作

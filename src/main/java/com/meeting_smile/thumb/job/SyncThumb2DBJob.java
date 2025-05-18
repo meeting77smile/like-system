@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.meeting_smile.thumb.mapper.BlogMapper;
 import com.meeting_smile.thumb.model.entity.Thumb;
 import com.meeting_smile.thumb.model.enums.ThumbTypeEnum;
-import com.meeting_smile.thumb.service.IThumbService;
+import com.meeting_smile.thumb.service.ThumbService;
 import com.meeting_smile.thumb.util.RedisKeyUtil;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +32,7 @@ import java.util.concurrent.Executors;
 public class SyncThumb2DBJob {
 
     @Resource
-    private IThumbService thumbService;
+    private ThumbService thumbService;
 
     @Resource
     private BlogMapper blogMapper;

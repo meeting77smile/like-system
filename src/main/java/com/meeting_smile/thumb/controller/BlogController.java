@@ -5,13 +5,12 @@ import com.meeting_smile.thumb.common.BaseResponse;
 import com.meeting_smile.thumb.common.ResultUtils;
 import com.meeting_smile.thumb.model.entity.Blog;
 import com.meeting_smile.thumb.model.vo.BlogVO;
-import com.meeting_smile.thumb.service.IBlogService;
+import com.meeting_smile.thumb.service.BlogService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,7 +27,7 @@ import java.util.List;
 @RequestMapping("/blog")
 public class BlogController {
     @Autowired
-    private IBlogService blogService;
+    private BlogService blogService;
 
     @GetMapping("/get")
     public BaseResponse<BlogVO> get(long blogId, HttpServletRequest request) {

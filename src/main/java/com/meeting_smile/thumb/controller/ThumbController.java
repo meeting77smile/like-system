@@ -4,7 +4,7 @@ package com.meeting_smile.thumb.controller;
 import com.meeting_smile.thumb.common.BaseResponse;
 import com.meeting_smile.thumb.common.ResultUtils;
 import com.meeting_smile.thumb.model.dto.thumb.DoThumbRequest;
-import com.meeting_smile.thumb.service.IThumbService;
+import com.meeting_smile.thumb.service.ThumbService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("thumb")
 public class ThumbController {
     @Resource
-    private IThumbService thumbService;
+    private ThumbService thumbService;
 
     @PostMapping("/do")
     public BaseResponse<Boolean> doThumb(@RequestBody DoThumbRequest doThumbRequest, HttpServletRequest request) {

@@ -15,7 +15,7 @@ import java.util.List;
  * @author meeting_smile
  * @since 2025-05-13
  */
-public interface IBlogService extends IService<Blog> {
+public interface BlogService extends IService<Blog> {
     BlogVO getBlogVOById(long blogId, HttpServletRequest request);
 
     /**

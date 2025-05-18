@@ -9,8 +9,8 @@ import com.meeting_smile.thumb.model.dto.thumb.DoThumbRequest;
 import com.meeting_smile.thumb.model.entity.Thumb;
 import com.meeting_smile.thumb.model.entity.User;
 import com.meeting_smile.thumb.model.enums.LuaStatusEnum;
-import com.meeting_smile.thumb.service.IThumbService;
-import com.meeting_smile.thumb.service.IUserService;
+import com.meeting_smile.thumb.service.ThumbService;
+import com.meeting_smile.thumb.service.UserService;
 import com.meeting_smile.thumb.util.RedisKeyUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -23,13 +23,13 @@ import java.util.Arrays;
 /**
  * 专注于高并发写的优化
  */
-@Service("IthumbService")
+@Service("thumbServiceRedis")
 @Slf4j
 @RequiredArgsConstructor
 public class ThumbServiceRedisImpl extends ServiceImpl<ThumbMapper, Thumb>
-        implements IThumbService {
+        implements ThumbService {
 
-    private final IUserService userService;
+    private final UserService userService;
 
     private final RedisTemplate<String, Object> redisTemplate;
 

@@ -2,29 +2,24 @@ package com.meeting_smile.thumb.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.ObjUtil;
-import cn.hutool.core.util.ObjectUtil;
 import com.meeting_smile.thumb.constant.ThumbConstant;
-import com.meeting_smile.thumb.mapper.UserMapper;
 import com.meeting_smile.thumb.model.entity.Blog;
 import com.meeting_smile.thumb.mapper.BlogMapper;
-import com.meeting_smile.thumb.model.entity.Thumb;
 import com.meeting_smile.thumb.model.entity.User;
 import com.meeting_smile.thumb.model.vo.BlogVO;
-import com.meeting_smile.thumb.service.IBlogService;
+import com.meeting_smile.thumb.service.BlogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.meeting_smile.thumb.service.IThumbService;
-import com.meeting_smile.thumb.service.IUserService;
+import com.meeting_smile.thumb.service.ThumbService;
+import com.meeting_smile.thumb.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.awt.font.TextHitInfo;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -36,13 +31,13 @@ import java.util.stream.Collectors;
  * @since 2025-05-13
  */
 @Service
-public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IBlogService {
+public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements BlogService {
     @Autowired
-    private IUserService userService;
+    private UserService userService;
 
     @Autowired
     @Lazy //用来解决循环引用问题（因为后续会在thumbService中引入blogService)
-    private IThumbService thumbService;
+    private ThumbService thumbService;
 
     @Autowired RedisTemplate<String,Object> redisTemplate;
 
