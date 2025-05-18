@@ -1,9 +1,8 @@
 package com.meeting_smile.thumb.util;
-
 import com.meeting_smile.thumb.constant.ThumbConstant;
 
 /**
- * 功能描述：将常用的key封装为方法获取
+ * @author pine
  */
 public class RedisKeyUtil {
 

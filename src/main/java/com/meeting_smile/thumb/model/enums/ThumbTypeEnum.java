@@ -1,5 +1,4 @@
-package com.meeting_smile.thumb.enums;
-
+package com.meeting_smile.thumb.model.enums;
 import lombok.Getter;
 
 /**
@@ -22,5 +21,4 @@ public enum ThumbTypeEnum {
     ThumbTypeEnum(int value) {
         this.value = value;
     }
-
 }
