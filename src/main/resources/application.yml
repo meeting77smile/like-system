@@ -22,6 +22,9 @@ spring:
       #超时时间
       timeout: 5000
       time-to-live: 600000
+  pulsar:
+    client:
+      service-url: pulsar://192.168.136.129:6650
 # mybatis-plus
 mybatis-plus:
   configuration:

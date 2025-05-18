@@ -26,7 +26,7 @@ import org.springframework.transaction.support.TransactionTemplate;
  * @author meeting_smile
  * @since 2025-05-13
  */
-@Service("thumbService")
+@Service("thumbServiceLocalCache")
 @Slf4j
 @RequiredArgsConstructor
 public class ThumbServiceImpl extends ServiceImpl<ThumbMapper, Thumb> implements ThumbService {
