@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: meeting_smile
+    mvc:
+      servlet:
+        path: /api
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.136.129:3306/like_system?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 2054865827
+  # redis配置
+  data:
+    redis:
+      #服务器地址
+      host: 118.178.229.132
+      #端口
+      port: 6379
+      #数据库默认为第0号库
+      database: 0
+      #超时时间
+      timeout: 5000
+      time-to-live: 600000
+# mybatis-plus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
