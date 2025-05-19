@@ -5,11 +5,16 @@ spring:
       servlet:
         path: /api
   # DataSource Config
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.136.129:3306/like_system?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 2054865827
+  #TiDB配置
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.136.129:3306/like_system?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.136.129:4000/like_system?useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: 2054865827
+    password:
   # redis配置
   data:
     redis:
